@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- link external css -->
+    <link rel="stylesheet" href="page1.component.css" />
+
+    <title>Smartship</title>
+</head>
+
+<body>
+    <div class="container-fluid background px-4">
+        <!-- FIRST ROW -->
+
+        <div class="row">
+            <div class="col flex-grow-1 text-col mt-3 text-center font">
+                SELECTED VESSELS
+                <span class="report-count text-light bg-sec px-2 py-1 border-sec rounded">92</span>
+            </div>
+            <div class="col flex-grow-1 text-col mt-3 text-center font">
+                TOTAL REPORTS
+                <span class="report-count text-light bg-sec px-2 py-1 border-sec rounded">460</span>
+            </div>
+            <div class="col flex-grow-1 text-light d-inline-block mt-2 text-center font">
+                CHARTERER
+                <div class="dropdown d-inline-block">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                        title="b1">
+                        <span class="line"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Item</a></li>
+                        <li><a class="dropdown-item" href="#">Item</a></li>
+                        <li><a class="dropdown-item" href="#">Item</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col flex-grow-1 text-center m-2"></div>
+
+            <div class="col flex-grow-1 text-center m-2">
+                <span class="bg-green px-2 equal-height-span"><i class="bi bi-clock clock-icon"></i>2022</span>
+                <span class="bg-sec px-2 border border-light equal-height-span"><i
+                        class="bi bi-clock clock-icon off-colour"></i>YTD</span>
+            </div>
+            <div class="col flex-grow-1 text-center mt-2">
+                <span>
+                    <i class="bi bi-calendar off-colour"></i>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" title="b1">
+                            <span class="line"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Item</a></li>
+                            <li><a class="dropdown-item" href="#">Item</a></li>
+                            <li><a class="dropdown-item" href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </span>
+            </div>
+        </div>
+
+
+        <!-- SECOND ROW -->
+
+        <div class="row mb-3 font">
+            <div
+                class="col d-flex justify-content-between bg-green border border-2 rounded-top border-bottom-0 text-light mx-1 custom-border-color1 pt-1">
+                Total EEOI(g-CO2/t-nm)
+                <span class="font-m">5.87</span>
+            </div>
+            <div class="col d-flex justify-content-between sec bg-gray text-light mx-1 rounded-top pt-1">
+                AVG AER(g-CO2/t-nm) <span class="text-end font-m">2.71</span>
+            </div>
+            <div class="col d-flex justify-content-between bg-gray rounded-top text-light mx-1 pt-1">
+                EEXI <span class="text-end font-m"></span>
+            </div>
+
+            <div class="col d-flex justify-content-between bg-gray rounded-top text-light mx-1 pt-1">
+                CII RATING <span class="text-end font-m">A-12</span><span class="text-end font-m">B-2</span><span
+                    class="text-end font-m">C-5</span>
+            </div>
+        </div>
+
+        <!-- ROW ICON -->
+        <div class="row">
+            <div class="d-flex justify-content-center">
+                <i class="icon-space off-colour bi bi-graph-up px-2"></i>
+                <i class="icon-bg off-colour bi bi-list-ul px-3"></i>
+            </div>
+        </div>
+        <!-- ROW THIRD -->
+        <div class="row mt-2">
+            <!-- column1 -->
+            <div class="col table-container">
+                <table class="table off-colour first-table">
+                    <thead>
+                        <tr>
+                            <th class="margin-check" colspan="4">
+                                <div class="d-flex flex-nowrap form-check">
+                                    <!-- Checkbox 1 -->
+                                    <div class="form-check mx-1">
+                                        <input class="form-check-input" type="checkbox" id="check1" />
+                                        <label class="form-check-label" for="check1">OWNED</label>
+                                    </div>
+
+                                    <!-- Checkbox 2 -->
+                                    <div class="form-check mx-1">
+                                        <input class="form-check-input" type="checkbox" id="check2" />
+                                        <label class="form-check-label" for="check2">CHARTERED</label>
+                                    </div>
+
+                                    <!-- Checkbox 3 -->
+                                    <div class="form-check mx-1">
+                                        <input class="form-check-input" type="checkbox" id="check3" />
+                                        <label class="form-check-label no-wrap" for="check3">CARGO RELET</label>
+                                    </div>
+                                </div>
+                            </th>
+                            <th colspan="5">VESSEL INFO</th>
+                            <th class="back" colspan="3">KPIS</th>
+                            <th class="bg-sec" colspan="3">EMISSIONS</th>
+                        </tr>
+                        <tr>
+                            <th scope="col" class="d-flex align-items-center">
+                                <span class="me-2">APPROVAL STATUS</span>
+                                <div class="dropdown d-inline-block dropup">
+                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false" title="b1"></button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Item</a></li>
+                                        <li><a class="dropdown-item" href="#">Item</a></li>
+                                        <li><a class="dropdown-item" href="#">Item</a></li>
+                                    </ul>
+                                </div>
+                            </th>
+
+                            <th scope="col">SUBMISSION DATE(LT)</th>
+                            <th scope="col">
+                                <span class="no-wrap">VOYAGE END </span> DATE(LT)
+                            </th>
+
+                            <th scope="col">REF NUMBER</th>
+                            <th scope="col">VESSEL GROUP</th>
+                            <th scope="col">VESSEL IMO</th>
+                            <th scope="col">VESSEL</th>
+                            <th scope="col">OPERATOR BU MAIL</th>
+                            <th scope="col">REQUESTED BY</th>
+                            <th class="back" scope="col">EEOI</th>
+                            <th class="back" scope="col">AER</th>
+                            <th class="back" scope="col">CII RATING</th>
+                            <th class="bg-sec" scope="col">BALLAST</th>
+                            <th class="bg-sec" scope="col">LADEN</th>
+                            <th class="bg-sec" scope="col">TOTAL</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody class="no-wrap">
+                        <tr class="table-row" *ngFor="let item of data" (click)="redirectToPage2(item.refnumber)">
+                            <td>{{ item.approvalstatus }}</td>
+                            <td>{{ item.submissiondate }}</td>
+                            <td>{{ item.voyageenddate }}</td>
+                            <td>{{ item.refnumber }}</td>
+                            <td>{{ item.vesselgroup }}</td>
+                            <td>{{ item.vesselimo }}</td>
+                            <td>{{ item.vessel }}</td>
+                            <td>{{ item.operatorbumail }}</td>
+                            <td>{{ item.requestedby }}</td>
+                            <td>{{ item.eeoi }}</td>
+                            <td>{{ item.aer }}</td>
+                            <td>{{ item.ciirating }}</td>
+                            <td>{{ item.ballast }}</td>
+                            <td>{{ item.laden }}</td>
+                            <td>{{ item.total }}</td>
+
+                        </tr>
+                        <!-- <tr>
+                            <td>PENDING APPROVAL</td>
+                            <td>2023-05-23</td>
+                            <td>2023-05-13</td>
+                            <td>90911</td>
+                            <td>Handy</td>
+                            <td>8911117</td>
+                            <td>LUCA 2</td>
+                            <td>pankhuri.s@alphaori.sg</td>
+                            <td>-</td>
+                            <td class="back">38.93</td>
+                            <td class="back">14.17</td>
+                            <td class="back">E</td>
+                            <td class="bg-sec">0</td>
+                            <td class="bg-sec">0</td>
+                            <td class="bg-sec">0</td>
+                        </tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ROW LAST -->
+        <div class="row">
+            <div class="d-flex justify-content-between">
+                <div class="off-colour">
+                    <i class="bi bi-chevron-double-left"></i>
+                    <i class="bi bi-chevron-left"></i>1 2 3 4 5<i class="bi bi-chevron-right"></i><i
+                        class="bi bi-chevron-double-right"></i>
+                </div>
+                <div class="d-flex last-element off-colour">
+                    <span class="me-2">Show</span>
+                    <select class="form-select bg-transparent off-colour form-select-sm py-0 px-1" aria-label="select">
+                        <option selected>100</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <span class="ms-2">Show</span>
+                </div>
+            </div>
+        </div>
+        <!-- EXTRA SPACE -->
+        <div class="row">
+            <div class="d-flex justify-content-between mb-3"></div>
+        </div>
+    </div>
+
+    <!--Bootsrapjs-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>

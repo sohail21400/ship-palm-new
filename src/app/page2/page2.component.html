@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="page2.component.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <title>Screenshot-2</title>
+</head>
+
+<body>
+    <div class="container-fluid background px-4">
+        <!-- ROW 1 -->
+        <div class="row">
+            <div class="col d-flex justify-content-end">
+                <i class="bi bi-clock off-colour p-1"></i>
+                <i class="bi bi-eye off-colour p-1"></i>
+                <i class="bi bi-box-arrow-in-down off-colour p-1"></i>
+                <i class="bi bi-download off-colour p-1"></i>
+                <i class="bi bi-justify off-colour p-1"></i>
+            </div>
+        </div>
+        <!-- ROW 2 -->
+        <div class="row">
+            <div class="col-4 d-flex border border-dark border-2 rounded city-grid">
+                <!-- <div class="col  justify-content-start city-grid"></div> -->
+                <img src="city_island.png" alt="City Island Flag" />
+
+                <span class="span-col no-wrap ms-2">CITY ISLAND
+                    <span class="font-s ms-4 off-colour"><i class="bi bi-dot off-colour"></i>Last
+                        Updated</span><br /><span class="font off-colour">IMO 9360960</span></span>
+                <div class="dropdown d-inline-block ms-2">
+                    <button class="btn dropdown-toggle border-arrow" type="button" data-bs-toggle="dropdown" title="asd"
+                        aria-expanded="false"></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Item</a></li>
+                        <li><a class="dropdown-item" href="#">Item</a></li>
+                        <li><a class="dropdown-item" href="#">Item</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- ROW 3 -->
+        <div class="row my-2 font">
+            <div
+                class="col d-flex justify-content-between bg-green border border-2 rounded-top border-bottom-0 text-light mx-1 custom-border-color1">
+                Total EEOI(g-CO2/t-nm)
+                <span class="text-danger">0</span>
+            </div>
+            <div class="col d-flex justify-content-between sec bg-gray rounded-top text-light mx-1">
+                AVG AER(g-CO2/t-nm) <span class="text-end">0</span>
+            </div>
+            <div class="col d-flex justify-content-between bg-gray rounded-top text-light mx-1">
+                CII RATING <span class="text-end">E</span>
+            </div>
+
+            <div class="col d-flex justify-content-between text-light mx-1"></div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="row mt-2">
+            <!-- column1 -->
+            <div class="col d-flex justify-content-between bg-gray rounded-top text-light mx-1">
+                <table class="table off-colour second-table">
+                    <thead>
+                        <tr>
+                            <th colspan="3" class="main-heading">EMISSION</th>
+                            <th colspan="3" class="main-heading">CONSUMPTIONS</th>
+                            <th colspan="2" class="main-heading">DISTANCE</th>
+                            <th colspan="1" class="main-heading">CHARTERER</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">BALLAST(mt)</th>
+                            <th scope="col">LADEN(mt)</th>
+                            <th scope="col">TOTAL(mt)</th>
+                            <th scope="col">TOTAL HSFO</th>
+                            <th scope="col">TOTAL VLSFO</th>
+                            <th scope="col">TOTAL LSMGO</th>
+                            <th scope="col">LADEN(nm)</th>
+                            <th scope="col">TOTAL(nm)</th>
+                            <th scope="col">NAME</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td scope="col">0</td>
+                            <td scope="col">0</td>
+                            <td scope="col">{{columnSums.totaldistance}}</td>
+                            <td scope="col">{{columnSums.totalhsfocons}}</td>
+                            <td scope="col">{{columnSums.totalvlsfocons}}</td>
+                            <td scope="col">{{columnSums.totallsmgocons}}</td>
+                            <td scope="col">0</td>
+                            <td scope="col">0</td>
+                            <td scope="col">VALE INTERN...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- MIDDLE ROW -->
+
+        <div class="row mt-5 mb-0">
+            <div class="d-flex justify-content-between">
+                <div class="col-6 text-col text-start font mb-0">
+                    VOYAGE DETAILS
+                    <div class="dropdown d-inline-block">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" title="asd"
+                            aria-expanded="false">
+                            <span class="line"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li selected><a class="dropdown-item" href="#">{{refnumber}}</a></li>
+                            <li><a class="dropdown-item" href="#">Item</a></li>
+                            <li><a class="dropdown-item" href="#">Item</a></li>
+                            <li><a class="dropdown-item" href="#">Item</a></li>
+                        </ul>
+                    </div>
+                    <i class="bi bi-pencil-fill off-colour px-1"></i>
+
+                    <i class="bi bi-trash-fill off-colour px-1"></i>
+                </div>
+                <div class="col-6 off-colour text-end font-s mb-0">
+                    Viscosity of VLSFO consumed in this voyage > 80 cst (as per BDN)
+                </div>
+            </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="row mt-0 pt-0">
+            <!-- <div class="table-responsive"> -->
+            <table class="table off-colour third-table">
+                <thead>
+                    <tr>
+                        <th scope="col">OPERATION</th>
+                        <th scope="col">DEPARTURE PORT</th>
+                        <th scope="col">ARRIVAL PORT</th>
+                        <th scope="col">VOYAGE START(UTC)</th>
+                        <th scope="col">VOYAGE END (UTC)</th>
+                        <th scope="col">TOTAL DISTANCE(nm)</th>
+                        <th scope="col">
+                            <span class="no-wrap">TOTAL HSFO </span> CONS.(mt)
+                        </th>
+                        <th scope="col">
+                            <span class="no-wrap">TOTAL VLSFO </span> CONS.(mt)
+                        </th>
+                        <th scope="col">
+                            <span class="no-wrap">TOTAL LSMGO </span> CONS.(mt)
+                        </th>
+                        <th scope="col">CARGO ONBOARD(mt)</th>
+                        <th class="bg-sec" scope="col">APPROVED STATUS</th>
+                        <th class="bg-sec" scope="col">REJECTED STATUS</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <br />
+
+                <tbody>
+                    <tr class="table-row" *ngFor="let item of data; let i = index">
+                        <td scope="col">{{item.operation}}</td>
+                        <td scope="col">{{item.departureport}}</td>
+                        <td scope="col">{{item.arrivalport}}</td>
+                        <td scope="col">{{item.voyagestart}}</td>
+                        <td scope="col">{{item.voyageend}}</td>
+                        <td scope="col">{{item.totaldistance}}</td>
+                        <td scope="col">{{item.totalhsfocons}}</td>
+                        <td scope="col">{{item.totalvlsfocons}}</td>
+                        <td scope="col">{{item.totallsmgocons}}</td>
+                        <td scope="col">{{item.cargoonboard}}</td>
+                        <td class="bg-sec text-center" scope="col">
+                            <!-- BUTTON -->
+                            <span (click)="toggleApprovalStatus(i)" class="toggle-text"
+                                [ngClass]="{'text': item.approvestatus == 'Verify', 'text-success': item.approvestatus == 'Verified'}">
+                                {{item.approvestatus }}
+                            </span>
+                        </td>
+                        <td class="bg-sec text-center" scope="col">
+                            <span (click)="toggleRejectStatus(i)" class="toggle-text"
+                                [ngClass]="{'text': item.rejectstatus== 'Reject', 'text-danger': item.rejectstatus == 'Rejected'}">
+                                {{item.rejectstatus}}
+                            </span>
+                        </td>
+                        <td scope="col">
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td scope="col"></td>
+                        <td class="bg-sec" scope="col">
+                            <button class="btn bg-transparent off-colour border-1 border-light font p-1">
+                                Approve Voyage
+                            </button>
+                        </td>
+                        <td class="bg-sec" scope="col">
+                            <button class="btn bg-transparent off-colour border-1 border-light font p-1">
+                                Reject Voyage
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- </div> -->
+    </div>
+    <!--Bootsrapjs-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.js"></script>
+</body>
+
+</html>
